@@ -17,7 +17,8 @@ Router.prototype.push = function push(location) {
  */
 
 export default new Router({
-  mode: "history",
+  // mode: "history",
+  // 注释了
   routes: [
     {
       name: "root",
