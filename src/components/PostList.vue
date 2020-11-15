@@ -108,7 +108,7 @@ export default {
       posts: [],
       active: "all",
       // getUrl: "https://cnodejs.org/api/v1/",
-      getUrl:"https://52.197.183.123/api/v1/",
+      getUrl:"http://mock.hunger-valley.com/cnode/api/v1/",
       pageParams: 1
     };
   },

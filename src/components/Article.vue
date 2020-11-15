@@ -79,7 +79,7 @@ export default {
     return {
       post: {},
       // url: "https://cnodejs.org/api/v1/",
-      url:"https://52.197.183.123/api/v1/",
+      url:"http://mock.hunger-valley.com/cnode/api/v1/",
       isLoading: true,
     };
   },

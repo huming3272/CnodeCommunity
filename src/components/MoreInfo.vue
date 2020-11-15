@@ -53,7 +53,7 @@ export default {
     return {
       isLoading: true,
       // getUrl: "https://cnodejs.org/api/v1/",
-      getUrl:"https://52.197.183.123/api/v1/",
+      getUrl:"http://mock.hunger-valley.com/cnode/api/v1/",
       recentData: {}
     };
   },

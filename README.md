@@ -1,6 +1,8 @@
 # cnode
 
 > hu
+# 预览地址
+https://huming3272.github.io/CnodeCommunity/dist/#/
 
 ## Build Setup
 
