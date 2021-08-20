@@ -47,12 +47,12 @@
 <script>
 import Vue from 'vue'
 export default {
-  
+
   name: "SlideBar",
   data() {
     return {
-      // getUrl: "https://cnodejs.org/api/v1/",
-      getUrl:"http://mock.hunger-valley.com/cnode/api/v1/",
+      getUrl: "https://cnodejs.org/api/v1/",
+      // getUrl:"http://mock.hunger-valley.com/cnode/api/v1/",
       slideData: {}
     };
   },

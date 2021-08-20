@@ -33,7 +33,7 @@
           params:{
             id: recents.id,
             name: recents.author.loginname
-          }  
+          }
         }"
               style="margin:0 20px"
             >{{recents.title}}</router-link>
@@ -52,8 +52,8 @@ export default {
   data() {
     return {
       isLoading: true,
-      // getUrl: "https://cnodejs.org/api/v1/",
-      getUrl:"http://mock.hunger-valley.com/cnode/api/v1/",
+      getUrl: "https://cnodejs.org/api/v1/",
+      // getUrl:"http://mock.hunger-valley.com/cnode/api/v1/",
       recentData: {}
     };
   },
@@ -74,7 +74,7 @@ export default {
               this.recentData = res.data.data.recent_replies
           }
           ;
-          console.log(this.recentData);
+
           this.isLoading = false;
         })
         // 数据返回后的操作

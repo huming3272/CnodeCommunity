@@ -81,7 +81,7 @@
           params:{
             id: post.id,
             loginname: post.author.loginname
-          }  
+          }
         }"
           style="margin:0 20px"
         >{{post.title}}</router-link>
@@ -107,8 +107,8 @@ export default {
       isLoading: true,
       posts: [],
       active: "all",
-      // getUrl: "https://cnodejs.org/api/v1/",
-      getUrl:"http://mock.hunger-valley.com/cnode/api/v1/",
+      getUrl: "https://cnodejs.org/api/v1/",
+      // getUrl:"http://mock.hunger-valley.com/cnode/api/v1/",
       pageParams: 1
     };
   },
@@ -125,7 +125,7 @@ export default {
       //   console.log(this.pageParams, "pageParams");
       //   console.log(this.$route.query.page, "query.page");
       // }
-      console.log(this.$route.query.tab, "tab--加载时--query");
+
       this.$http
         .get(this.getUrl + "topics", {
           params: {
@@ -146,7 +146,7 @@ export default {
           console.log(err);
         });
 
-      console.log(this.$route.query, "结束");
+
       this.isloading = false;
       window.scrollTo(0, 0);
 
@@ -165,7 +165,7 @@ export default {
           // page: '鸡儿'
         }
       });
-      console.log(this.$route.query.page,"鸡儿")
+
       this.getData();
     },
     getPage(page) {
@@ -191,7 +191,7 @@ export default {
     this.getData();
   },
   mounted() {
-    
+
     this.active = this.$route.query.tab||"all";
   },
   updated() {

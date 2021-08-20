@@ -56,7 +56,7 @@
           params:{
             id: topics.id,
             type: 'topics'
-          }  
+          }
         }"
               style="margin:0 20px"
             >{{topics.title}}</router-link>
@@ -68,7 +68,7 @@
               name:'more_info',
               params:{
                 id:userInfo.loginname,
-                type: 'topics' 
+                type: 'topics'
               }
             }">查看更多»</router-link>
           </li>
@@ -89,7 +89,7 @@
           params:{
             id: replies.id,
             name: replies.author.loginname
-          }  
+          }
         }"
               style="margin:0 20px"
             >{{replies.title}}</router-link>
@@ -101,7 +101,7 @@
               name:'more_info',
               params:{
                 id:userInfo.loginname,
-                type: 'replies' 
+                type: 'replies'
               }
             }">查看更多»</router-link>
           </li>
@@ -117,8 +117,8 @@ export default {
   data() {
     return {
       isLoading: true,
-      // getUrl: "https://52.197.183.123/api/v1",
-      getUrl:"http://mock.hunger-valley.com/cnode/api/v1/",
+      getUrl: "https://cnodejs.org/api/v1/",
+      // getUrl:"http://mock.hunger-valley.com/cnode/api/v1/",
       userInfo: {}
     };
   },
@@ -135,30 +135,32 @@ export default {
         .then(res => {
           // console.log(res);
           userInfo = res.data.data;
+          this.$http
+            .get(this.getUrl + "topic_collect/" + this.$route.params.loginname, {
+              // params: {
+              //   page: 1,
+              //   limit: 10
+              // }
+            })
+            .then(res => {
+              console.log(res,'数据');
+              // console.log(this.userInfo.collect);
+
+              userInfo.collect = res.data.data.length;
+              this.userInfo = userInfo;
+              this.isLoading = false;
+            })
+            .catch(function(err) {
+              console.log(err);
+            });
         })
         // 数据返回后的操作
         .catch(function(err) {
           //处理返回失败的问题
           console.log(err);
         });
-      this.$http
-        .get(this.getUrl + "topic_collect/" + this.$route.params.loginname, {
-          // params: {
-          //   page: 1,
-          //   limit: 10
-          // }
-        })
-        .then(res => {
-          console.log(res);
-          // console.log(this.userInfo.collect);
 
-          userInfo.collect = res.data.data.length;
-          this.userInfo = userInfo;
-          this.isLoading = false;
-        })
-        .catch(function(err) {
-          console.log(err);
-        });
+
     }
   },
   beforeMount() {

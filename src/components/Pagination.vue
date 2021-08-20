@@ -91,7 +91,7 @@ export default {
       // console.log(page, this.pagebtns[3]);
       this.currentPage = page;
 
-      console.log(this.currentPage, "2");
+
       this.$emit("emitPage", this.currentPage);
       // 朝父元素传值
       // console.log(this.pagebtns)
@@ -112,7 +112,7 @@ export default {
           this.pagebtns = [1, 2, 3, 4, 5];
           this.changeBtn(1);
           // this.refreshBtn()
-          console.log("执行了");
+
           break;
       }
     }
@@ -123,7 +123,7 @@ export default {
         this.currentPage = 1
         this.pagebtns = [1,2,3,4,5]
       }
-      console.log(this.$route,'路由对象')
+
       // this.currentPage = this.$route.query.page
       // this.refreshBtn()
       // console.log(this.$route.query.page,'路由page')
@@ -135,7 +135,7 @@ export default {
     // this.currentPage = 2
   },
   updated() {
-    
+
   }
 };
 </script>

@@ -43,7 +43,7 @@
               name:'user_info',
               params:{
                 loginname: reply.author.loginname,
-                
+
               }
             }"
             >
@@ -78,8 +78,8 @@ export default {
   data() {
     return {
       post: {},
-      // url: "https://cnodejs.org/api/v1/",
-      url:"http://mock.hunger-valley.com/cnode/api/v1/",
+      url: "https://cnodejs.org/api/v1/",
+      // url:"http://mock.hunger-valley.com/cnode/api/v1/",
       isLoading: true,
     };
   },
@@ -110,7 +110,7 @@ export default {
     // this.$route.path
     '$route.path':function(to, from) {
       this.getArticleData();
-      console.log(this.$route.path)
+
     }
   }
 };
